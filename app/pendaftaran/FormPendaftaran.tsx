@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { daftarkanPendaftar } from "./actions";
+import { daftarEkskul as actionDaftarEkskul } from "@/app/actions/pendaftaran";
 
 type ActionState = { error?: string; success?: string };
 
@@ -21,7 +21,7 @@ export default function FormPendaftaran({
 }) {
   const initialState: ActionState = {};
   const [state, formAction, isPending] = useActionState(
-    daftarkanPendaftar,
+    actionDaftarEkskul,
     initialState,
   );
 
